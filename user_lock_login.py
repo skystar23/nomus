@@ -15,7 +15,7 @@ def open_browser(driver,deviceip):
     driver.find_element(By.NAME,"Continue").click()
 
 driver = webdriver.Firefox()
-open_browser(driver,deviceip="193.168.1.134")
+open_browser(driver,deviceip="193.168.1.111")
 
 i, j = 1, 1
 sleep_time = 2 
