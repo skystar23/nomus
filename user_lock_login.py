@@ -28,7 +28,7 @@ open_browser(driver,deviceip="192.168.1.1")
 i, j = 1, 1
 sleep_time = 2 
 
-while True:
+for _ in range(1):
     for _ in range(3):
         print(i,".",end=" ")
         login(driver)
