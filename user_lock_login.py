@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 import time
 
@@ -14,8 +15,15 @@ def open_browser(driver,deviceip):
     time.sleep(2)  
     driver.find_element(By.NAME,"Continue").click()
 
-driver = webdriver.Firefox()
-open_browser(driver,deviceip="192.168.1.1")
+
+options = Options()
+options.add_argument("--headless")              # Must for Docker (no display)
+options.add_argument("--no-sandbox")            # Often needed in containers
+options.add_argument("--disable-dev-shm-usage") # Prevents crashes in low-shm envs
+# options.binary_location = "/usr/lib/firefox-esr/firefox-esr"  # if needed
+
+driver = webdriver.Firefox(options=options)
+open_browser(driver,deviceip="193.168.1.134")
 
 i, j = 1, 1
 sleep_time = 2 
