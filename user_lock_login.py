@@ -23,7 +23,7 @@ options.add_argument("--disable-dev-shm-usage") # Prevents crashes in low-shm en
 # options.binary_location = "/usr/lib/firefox-esr/firefox-esr"  # if needed
 
 driver = webdriver.Firefox(options=options)
-open_browser(driver,deviceip="193.168.1.136")
+open_browser(driver,deviceip="193.168.1.136:1234")
 
 i, j = 1, 1
 sleep_time = 2 
