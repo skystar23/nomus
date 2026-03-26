@@ -5,7 +5,7 @@ import time
 
 def login(driver):
     driver.find_element(By.ID,"httpd_username").send_keys("admin")
-    driver.find_element(By.ID,"httpd_password").send_keys("NOMUS")
+    driver.find_element(By.ID,"httpd_password").send_keys("Kiran@111")
     driver.find_element(By.NAME,"login").click()
     time.sleep(0.5)
     print(driver.find_element(By.ID,"erp").text)
